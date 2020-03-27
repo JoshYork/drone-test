@@ -1,0 +1,10 @@
+kind: pipeline
+type: docker
+name: CRA Tests
+
+steps:
+  - name: install deps
+    image: mhart/alpine-node:12
+    commands:
+      - npm install
+      - npm test
